@@ -9,13 +9,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-    title: "Premium Developer Portfolio | Modern Web Development",
-    description: "A stunning portfolio showcasing cutting-edge web development projects with glassmorphism design and smooth animations. Built with Next.js, TypeScript, and Tailwind CSS.",
-    keywords: ["portfolio", "web developer", "next.js", "react", "typescript", "tailwind"],
-    authors: [{ name: "Your Name" }],
+    title: "Ganapathi",
+    description: "Portfolio of Ganapathi V - Front-End Developer specializing in modern web development with React, Next.js, TypeScript, and Tailwind CSS.",
+    keywords: ["Ganapathi V", "portfolio", "front-end developer", "web developer", "next.js", "react", "typescript", "tailwind"],
+    authors: [{ name: "Ganapathi V" }],
     openGraph: {
-        title: "Premium Developer Portfolio",
-        description: "Explore my cutting-edge web development projects",
+        title: "Ganapathi V | Front-End Developer",
+        description: "Explore my web development projects and skills",
         type: "website",
     },
 };

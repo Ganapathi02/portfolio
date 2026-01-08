@@ -65,19 +65,17 @@ const Contact = () => {
     };
 
     const contactInfo = [
-        { icon: HiMail, label: "Email", value: "your.email@example.com", href: "mailto:your.email@example.com" },
-        { icon: HiPhone, label: "Phone", value: "+1 (555) 123-4567", href: "tel:+15551234567" },
-        { icon: HiLocationMarker, label: "Location", value: "San Francisco, CA", href: "#" },
+        { icon: HiMail, label: "Email", value: "ganapathivg02@gmail.com", href: "mailto:ganapathivg02@gmail.com" },
+        { icon: HiLocationMarker, label: "Location", value: "Chennai, Tamil Nadu, India", href: "#" },
     ];
 
     const socialLinks = [
-        { icon: FaGithub, href: "https://github.com", label: "GitHub" },
-        { icon: FaLinkedin, href: "https://linkedin.com", label: "LinkedIn" },
-        { icon: FaTwitter, href: "https://twitter.com", label: "Twitter" },
+        { icon: FaGithub, href: "https://github.com/Ganapathi02", label: "GitHub" },
+        { icon: FaLinkedin, href: "http://www.linkedin.com/in/ganapathi-vg", label: "LinkedIn" },
     ];
 
     return (
-        <section id="contact" className="py-20 md:py-32 bg-black relative">
+        <section id="contact" className="py-20 md:py-32 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     ref={ref}
@@ -86,11 +84,11 @@ const Contact = () => {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-3xl md:text-5xl font-bold mb-4">
-                        Get In <span className="gradient-text">Touch</span>
+                    <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gray-900">
+                        Get In Touch
                     </h2>
-                    <div className="w-20 h-1 bg-gradient-to-r from-primary to-white mx-auto rounded-full" />
-                    <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
+                    <div className="w-20 h-1 bg-blue-600 mx-auto" />
+                    <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
                         Have a project in mind? Let&apos;s work together to create something amazing
                     </p>
                 </motion.div>
@@ -101,11 +99,11 @@ const Contact = () => {
                         initial={{ opacity: 0, x: -50 }}
                         animate={inView ? { opacity: 1, x: 0 } : {}}
                         transition={{ delay: 0.2, duration: 0.8 }}
-                        className="glass-strong rounded-2xl p-8 glow-blue"
+                        className="bg-white border border-gray-200 rounded-lg p-8"
                     >
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div>
-                                <label htmlFor="name" className="block text-sm font-medium mb-2">
+                                <label htmlFor="name" className="block text-sm font-medium mb-2 text-gray-700">
                                     Your Name
                                 </label>
                                 <input
@@ -114,14 +112,15 @@ const Contact = () => {
                                     name="name"
                                     value={formData.name}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 bg-black/50 border border-primary/30 rounded-lg focus:outline-none focus:border-primary transition-colors glass"
-                                    placeholder="John Doe"
+                                    className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-blue-600 transition-colors text-gray-900 bg-gray-50"
+                                    placeholder="Enter your name"
+                                    suppressHydrationWarning
                                 />
-                                {errors.name && <p className="text-red-400 text-sm mt-1">{errors.name}</p>}
+                                {errors.name && <p className="text-red-600 text-sm mt-1">{errors.name}</p>}
                             </div>
 
                             <div>
-                                <label htmlFor="email" className="block text-sm font-medium mb-2">
+                                <label htmlFor="email" className="block text-sm font-medium mb-2 text-gray-700">
                                     Your Email
                                 </label>
                                 <input
@@ -130,15 +129,16 @@ const Contact = () => {
                                     name="email"
                                     value={formData.email}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 bg-black/50 border border-primary/30 rounded-lg focus:outline-none focus:border-primary transition-colors glass"
-                                    placeholder="john@example.com"
+                                    className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-blue-600 transition-colors text-gray-900 bg-gray-50"
+                                    placeholder="Enter your email"
+                                    suppressHydrationWarning
                                 />
-                                {errors.email && <p className="text-red-400 text-sm mt-1">{errors.email}</p>}
+                                {errors.email && <p className="text-red-600 text-sm mt-1">{errors.email}</p>}
                             </div>
 
                             <div>
-                                <label htmlFor="message" className="block text-sm font-medium mb-2">
-                                    Message
+                                <label htmlFor="message" className="block text-sm font-medium mb-2 text-gray-700">
+                                    Your Message
                                 </label>
                                 <textarea
                                     id="message"
@@ -146,15 +146,17 @@ const Contact = () => {
                                     value={formData.message}
                                     onChange={handleChange}
                                     rows={5}
-                                    className="w-full px-4 py-3 bg-black/50 border border-primary/30 rounded-lg focus:outline-none focus:border-primary transition-colors glass resize-none"
-                                    placeholder="Your message here..."
+                                    className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-blue-600 transition-colors resize-none text-gray-900 bg-gray-50"
+                                    placeholder="Enter your message"
+                                    suppressHydrationWarning
                                 />
-                                {errors.message && <p className="text-red-400 text-sm mt-1">{errors.message}</p>}
+                                {errors.message && <p className="text-red-600 text-sm mt-1">{errors.message}</p>}
                             </div>
 
                             <button
                                 type="submit"
-                                className="w-full px-8 py-4 bg-primary text-white rounded-lg font-semibold hover:bg-primary-dark transition-all duration-300 glow-blue hover:scale-105"
+                                className="w-full px-8 py-4 bg-blue-600 text-white rounded font-semibold hover:bg-blue-700 transition-all duration-300"
+                                suppressHydrationWarning
                             >
                                 Send Message
                             </button>
@@ -177,14 +179,14 @@ const Contact = () => {
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={inView ? { opacity: 1, y: 0 } : {}}
                                     transition={{ delay: 0.6 + index * 0.1, duration: 0.6 }}
-                                    className="glass rounded-xl p-6 flex items-center gap-4 hover:glass-strong transition-all duration-300 hover:scale-105 block"
+                                    className="bg-white border border-gray-200 rounded-lg p-6 flex items-center gap-4 hover:shadow-lg transition-all duration-300 block"
                                 >
-                                    <div className="text-3xl text-primary">
+                                    <div className="text-3xl text-blue-600">
                                         <info.icon />
                                     </div>
                                     <div>
-                                        <div className="text-sm text-gray-400">{info.label}</div>
-                                        <div className="font-medium">{info.value}</div>
+                                        <div className="text-sm text-gray-600">{info.label}</div>
+                                        <div className="font-medium text-gray-900">{info.value}</div>
                                     </div>
                                 </motion.a>
                             ))}
@@ -195,9 +197,9 @@ const Contact = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={inView ? { opacity: 1, y: 0 } : {}}
                             transition={{ delay: 0.9, duration: 0.6 }}
-                            className="glass-strong rounded-xl p-8"
+                            className="bg-white border border-gray-200 rounded-lg p-8"
                         >
-                            <h3 className="text-xl font-bold mb-6 gradient-text">Connect With Me</h3>
+                            <h3 className="text-xl font-bold mb-6 text-gray-900">Connect With Me</h3>
                             <div className="flex gap-4">
                                 {socialLinks.map((social) => (
                                     <a
@@ -205,7 +207,7 @@ const Contact = () => {
                                         href={social.href}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="w-14 h-14 glass rounded-full flex items-center justify-center text-2xl text-primary hover:glass-strong hover:scale-110 transition-all duration-300 glow-blue"
+                                        className="w-14 h-14 border-2 border-gray-300 rounded flex items-center justify-center text-2xl text-gray-700 hover:bg-blue-600 hover:text-white hover:border-blue-600 hover:scale-110 transition-all duration-300"
                                         aria-label={social.label}
                                     >
                                         <social.icon />
